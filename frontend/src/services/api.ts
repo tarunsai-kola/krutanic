@@ -1,14 +1,14 @@
 import { MOCK_COURSES } from '../constants';
 import { User, Course, CartItem } from '../types';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = '/api';
 
 // Helper to handle fetch with timeout and JSON parsing
 async function fetchWithTimeout(resource: string, options: RequestInit = {}) {
-  const { timeout = 5000 } = options as any;
+  const { timeout = 1000 } = options as any;
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeout);
-  
+
   try {
     const response = await fetch(resource, {
       ...options,
@@ -31,7 +31,7 @@ export const authAPI = {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
-      
+
       if (!res.ok) throw new Error('Login failed');
       return await res.json();
     } catch (error) {
@@ -67,7 +67,7 @@ export const authAPI = {
       return await res.json();
     } catch (error) {
       console.warn('Backend offline, using mock registration');
-       return new Promise((resolve) => {
+      return new Promise((resolve) => {
         setTimeout(() => {
           resolve({
             user: {
@@ -86,14 +86,14 @@ export const authAPI = {
   },
 
   getProfile: async (token: string): Promise<User> => {
-     try {
+    try {
       const res = await fetchWithTimeout(`${API_URL}/auth/me`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed to fetch profile');
       return await res.json();
     } catch (error) {
-       throw error;
+      throw error;
     }
   }
 };
@@ -101,24 +101,13 @@ export const authAPI = {
 // --- Courses API ---
 export const courseAPI = {
   getAll: async (): Promise<Course[]> => {
-    try {
-      const res = await fetchWithTimeout(`${API_URL}/courses`);
-      if (!res.ok) throw new Error('Failed to fetch courses');
-      return await res.json();
-    } catch (error) {
-      console.warn('Backend offline, using mock courses');
-      return MOCK_COURSES;
-    }
+    // Using mock courses for development
+    console.log('Loading mock courses:', MOCK_COURSES.length, 'courses available');
+    return MOCK_COURSES;
   },
 
   getById: async (id: string): Promise<Course | undefined> => {
-    try {
-      const res = await fetchWithTimeout(`${API_URL}/courses/${id}`);
-      if (!res.ok) throw new Error('Failed to fetch course');
-      return await res.json();
-    } catch (error) {
-      return MOCK_COURSES.find(c => c.id === id);
-    }
+    return MOCK_COURSES.find(c => c.id === id);
   }
 };
 
@@ -128,13 +117,13 @@ export const orderAPI = {
     try {
       const res = await fetchWithTimeout(`${API_URL}/orders`, {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           courseIds: items.map(i => i.course.id),
-          amount: total 
+          amount: total
         }),
       });
       if (!res.ok) throw new Error('Order failed');
