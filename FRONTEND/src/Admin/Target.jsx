@@ -13,6 +13,8 @@ const Target = () => {
   const [noOfPayment, setNoOfPayment] = useState({});
   const [enrolledStudents, setEnrolledStudents] = useState([]);
   const [teamRevenue, setTeamRevenue] = useState({});
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const [months, setMonths] = useState([]);
 
   const today = new Date();
   const currentMonth = today.toISOString().slice(0, 7);
@@ -58,22 +60,35 @@ const Target = () => {
     return months[new Date().getMonth()];
   };
 
+  // Get the previous months including the current month
+  const getPastMonths = () => {
+    const months = [
+      "January", "February", "March", "April", "May", "June", 
+      "July", "August", "September", "October", "November", "December"
+    ];
+    const currentMonthIndex = new Date().getMonth();
+    let pastMonths = [];
+    for (let i = currentMonthIndex; i >= 0; i--) {
+      pastMonths.push(months[i]);
+    }
+    return pastMonths;
+  };
+
   // Calculate team revenue when BDA and enrolled students data are available
   useEffect(() => {
-    if (bda.length > 0 && enrolledStudents.length > 0) {
+    if (bda.length > 0 && enrolledStudents.length > 0 && selectedMonth) {
       const revenueByTeam = {};
-      const currentMonthName = getCurrentMonthName();
       
-      // Filter students: fullPaid status and current month (matching FullPaidList page)
+      // Filter students: fullPaid status and selected month
       const fullyPaidStudents = enrolledStudents.filter((student) => {
-        const isCurrentMonth = getMonthFromDate(student.createdAt) === currentMonthName;
+        const isSelectedMonth = getMonthFromDate(student.createdAt) === selectedMonth;
         const isFullPaid = student.status === "fullPaid";
         
-        return isCurrentMonth && isFullPaid;
+        return isSelectedMonth && isFullPaid;
       });
       
-      console.log("Current Month:", currentMonthName);
-      console.log("Total FullPaid Students in December:", fullyPaidStudents.length);
+      console.log("Selected Month:", selectedMonth);
+      console.log("Total FullPaid Students in", selectedMonth, ":", fullyPaidStudents.length);
       
       fullyPaidStudents.forEach((student) => {
         // Find the BDA by counselor name (case-insensitive match)
@@ -100,11 +115,14 @@ const Target = () => {
       console.log("Revenue by Team:", revenueByTeam);
       setTeamRevenue(revenueByTeam);
     }
-  }, [bda, enrolledStudents]);
+  }, [bda, enrolledStudents, selectedMonth]);
 
   useEffect(() => {
     fetchBda();
     fetchEnrolledStudents();
+    const currentMonthName = getCurrentMonthName();
+    setSelectedMonth(currentMonthName);
+    setMonths(getPastMonths());
   }, []);
 
   // const handleInputChange = (e, id) => {
@@ -267,13 +285,27 @@ const Target = () => {
       <Toaster position="top-center" reverseOrder={false} />
       <div>
         <h2>Target Assign to Team</h2>
+        <div className="mb-4">
+          <label className="mr-2 font-semibold">Select Month: </label>
+          <select
+            className="border border-black px-3 py-2 rounded-lg"
+            value={selectedMonth}
+            onChange={(e) => setSelectedMonth(e.target.value)}
+          >
+            {months.map((month, index) => (
+              <option key={index} value={month}>
+                {month}
+              </option>
+            ))}
+          </select>
+        </div>
         <div className="coursetable">
           {loading ? (
             <div id="loader">
-              <div class="three-body">
-                <div class="three-body__dot"></div>
-                <div class="three-body__dot"></div>
-                <div class="three-body__dot"></div>
+              <div className="three-body">
+                <div className="three-body__dot"></div>
+                <div className="three-body__dot"></div>
+                <div className="three-body__dot"></div>
               </div>
             </div>
           ) : (
@@ -395,10 +427,10 @@ const Target = () => {
       <div className="coursetable">
         {loading ? (
           <div id="loader">
-            <div class="three-body">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
+            <div className="three-body">
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
             </div>
           </div>
         ) : (

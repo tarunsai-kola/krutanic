@@ -9,6 +9,7 @@ const TeamDetail = () => {
   const [bdaData, setBdaData] = useState(null);
   const [allData, setAllData] = useState([]);
   const [selectedTeam, setSelectedTeam] = useState("");
+  const [managerTeams, setManagerTeams] = useState([]); // Array of teams for managers
   const [selectedBda, setSelectedBda] = useState(null);
   const [getteamName, setGetTeamName] = useState([]);
   const [dailyRevenue, setDailyRevenue] = useState([]);
@@ -25,7 +26,17 @@ const TeamDetail = () => {
           params: { bdaId },
         });
         setBdaData(response.data);
-        setSelectedTeam(response.data.team);
+        // For managers, use teams array if available, otherwise parse from team string
+        if (response.data.designation === "MANAGER") {
+          const teamsArray = response.data.teams && response.data.teams.length > 0 
+            ? response.data.teams 
+            : response.data.team ? response.data.team.split(", ").map(t => t.trim()) : [];
+          setManagerTeams(teamsArray);
+          setSelectedTeam(teamsArray[0] || ""); // Default to first team
+        } else {
+          setSelectedTeam(response.data.team);
+          setManagerTeams([response.data.team]);
+        }
       } catch (err) {
         console.log("Failed to fetch bda data");
       }
@@ -152,7 +163,16 @@ const TeamDetail = () => {
     setDetailVisible(false);
   };
 
-  const filteredData = allData.filter((bda) => bda.team === selectedTeam);
+  // Filter team members: for managers, show all members from any of their managed teams
+  // For BDA/Leader, show only their own team
+  const filteredData = allData.filter((bda) => {
+    // If user is a manager with multiple teams, filter by selected team from dropdown
+    if (bdaData && bdaData.designation === "MANAGER") {
+      return bda.team === selectedTeam;
+    }
+    // For non-managers, just match by their team
+    return bda.team === selectedTeam;
+  });
    const handleloginteam = async (email,password) => {
       try {
         const response = await axios.post(`${API}/checkbdaauth`, { email, password });
@@ -461,23 +481,23 @@ const TeamDetail = () => {
             </div>
           </div>
           <div></div>
-          {/* {bdaData && bdaData.designation === "MANAGER" && (
-            <select
-              value={selectedTeam}
-              onChange={(e) => setSelectedTeam(e.target.value)}
-            >
-              {bdaData && bdaData.team && (
-                <option value={bdaData.team}>Your Team</option>
-              )}
-              {getteamName.map((team, index) => {
-                return (
-                  <option key={index} value={team.teamname}>
-                    {team.teamname}
+          {/* Team selector for managers with multiple teams */}
+          {bdaData && bdaData.designation === "MANAGER" && managerTeams.length > 1 && (
+            <div className="flex items-center gap-2 mb-4">
+              <label className="font-semibold">Select Team:</label>
+              <select
+                value={selectedTeam}
+                onChange={(e) => setSelectedTeam(e.target.value)}
+                className="px-3 py-2 border rounded-md"
+              >
+                {managerTeams.map((team, index) => (
+                  <option key={index} value={team}>
+                    {team}
                   </option>
-                );
-              })}
-            </select>
-          )} */}
+                ))}
+              </select>
+            </div>
+          )}
         </div>
         <table border="1">
           <thead>

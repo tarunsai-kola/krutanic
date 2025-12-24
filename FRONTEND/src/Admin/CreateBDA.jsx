@@ -8,6 +8,7 @@ const CreateBDA = () => {
   const [teamName, setTeamName] = useState("");
     const [bda, setBda] = useState([]);
   const [getteamName, setGetTeamName] = useState([]);
+  const [teams, setTeams] = useState([{ id: 1, name: "" }]);
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -25,12 +26,17 @@ const CreateBDA = () => {
 
   const handleSumbit = async (e) => {
     e.preventDefault();
+    // For MANAGER, join all team names; for others, use single team
+    const teamValue = formData.designation === "MANAGER" 
+      ? teams.map(t => t.name.trim()).filter(name => name !== "").join(", ")
+      : formData.team.trim();
     const newBda = {
       fullname: formData.fullname.trim(),
       email: formData.email.trim(),
       password: formData.password.trim(),
-      team: formData.team.trim(),
+      team: teamValue,
       designation: formData.designation.trim(),
+      teams: formData.designation === "MANAGER" ? teams.map(t => t.name.trim()).filter(name => name !== "") : [],
     };
     try {
       if (editingBdaId) {
@@ -88,8 +94,25 @@ const CreateBDA = () => {
       team: "",
       designation: "",
     });
+    setTeams([{ id: 1, name: "" }]);
     setEditingBdaId(null);
     setiscourseFormVisible(false);
+  };
+
+  // Functions for managing dynamic teams
+  const handleAddTeam = () => {
+    const newId = teams.length > 0 ? Math.max(...teams.map(t => t.id)) + 1 : 1;
+    setTeams([...teams, { id: newId, name: "" }]);
+  };
+
+  const handleRemoveTeam = (id) => {
+    if (teams.length > 1) {
+      setTeams(teams.filter(t => t.id !== id));
+    }
+  };
+
+  const handleTeamNameChange = (id, value) => {
+    setTeams(teams.map(t => t.id === id ? { ...t, name: value } : t));
   };
 
   const handleChange = (event) => {
@@ -271,15 +294,54 @@ const CreateBDA = () => {
               <option value="LEADER">LEADER</option>
               <option value="BDA">BDA</option>
             </select>
-            <select name="team" id="team" value={formData.team} onChange={handleChange} required>
-              <option disabled value="">Select Team</option>
-              {/* <option value="TITAN">TITAN</option>
-              <option value="GLADIATOR">GLADIATOR</option>
-              <option value="BEAST">BEAST</option>
-              <option value="WARRIOR">WARRIOR</option>
-              <option value="NO TEAM">NO TEAM</option> */}
-              {getteamName.map((team, index) => { return(  <option key={index} value={team.teamname}>{team.teamname}</option>)})}
-            </select>
+            
+            {/* Show single team select for BDA and LEADER */}
+            {(formData.designation === "BDA" || formData.designation === "LEADER" || formData.designation === "") && (
+              <select name="team" id="team" value={formData.team} onChange={handleChange} required={formData.designation !== "MANAGER"}>
+                <option disabled value="">Select Team</option>
+                {getteamName.map((team, index) => { return(  <option key={index} value={team.teamname}>{team.teamname}</option>)})}
+              </select>
+            )}
+            
+            {/* Show dynamic teams section for MANAGER */}
+            {formData.designation === "MANAGER" && (
+              <div className="teams-section" style={{ width: '100%' }}>
+                <label style={{ fontWeight: 'bold', marginBottom: '8px', display: 'block' }}>Manage Teams:</label>
+                {teams.map((team, index) => (
+                  <div key={team.id} className="flex gap-2 items-center" style={{ marginBottom: '8px' }}>
+                    <select
+                      value={team.name}
+                      onChange={(e) => handleTeamNameChange(team.id, e.target.value)}
+                      required
+                      style={{ flex: 1 }}
+                    >
+                      <option disabled value="">Select Team {index + 1}</option>
+                      {getteamName.map((t, idx) => (
+                        <option key={idx} value={t.teamname}>{t.teamname}</option>
+                      ))}
+                    </select>
+                    {teams.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveTeam(team.id)}
+                        className="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600"
+                        title="Remove Team"
+                      >
+                        ✖
+                      </button>
+                    )}
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  onClick={handleAddTeam}
+                  className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600"
+                  style={{ marginTop: '8px' }}
+                >
+                  + Add Team
+                </button>
+              </div>
+            )}
             <input
               type="text"
               value={formData.password}

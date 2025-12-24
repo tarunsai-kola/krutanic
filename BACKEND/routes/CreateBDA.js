@@ -9,12 +9,13 @@ const crypto = require('crypto');
 
 //post to create a new bda account
 router.post("/createbda", async (req, res) => {
-  const { fullname, email, team, designation, password } = req.body;
+  const { fullname, email, team, teams, designation, password } = req.body;
   try {
     const newbda = new CreateBDA({
       fullname: fullname,
       email: email,
       team: team,
+      teams: teams || [], // Store teams array for managers
       designation: designation,
       password: password
     });
@@ -49,10 +50,10 @@ router.get("/getbda", async (req, res) => {
 router.put("/updatebda/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const { fullname, email, password , team, designation } = req.body;
+    const { fullname, email, password , team, teams, designation } = req.body;
     const updatedbda = await CreateBDA.findByIdAndUpdate(
       id,
-      { fullname, email, password , team, designation },
+      { fullname, email, password , team, teams: teams || [], designation },
       { new: true }
     );
     if (!updatedbda) {

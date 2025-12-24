@@ -5,6 +5,7 @@ const CreateBDA = new mongoose.Schema({
     email: { type: String, unique: true , },
     password: { type: String },
     team: { type: String},
+    teams: [{ type: String }], // Array of team names for managers managing multiple teams
     designation: { type: String},
     otp: { type: String },
     mailSended : {type: Boolean , default: false},
