@@ -77,21 +77,21 @@ const MarketingHeader = () => {
         <div className="sidebar">
           <Link to="/marketing/home">
             {" "}
-            <i class="fa fa-home"></i> HOME{" "}
+            <i className="fa fa-home"></i> HOME{" "}
           </Link>
           <Link to="/marketing/previous">
             {" "}
-            <i class="fa fa-calendar"></i> Previous Month{" "}
+            <i className="fa fa-calendar"></i> Previous Month{" "}
           </Link>
           {["LEADER", "MANAGER"].includes(marketingData?.designation) && (
             <>
             <Link to="/marketing/leads">
             {" "}
-            <i class="fa fa-users"></i> All Leads{" "}
+            <i className="fa fa-users"></i> All Leads{" "}
           </Link>
           <Link to="/marketing/addexecutive">
             {" "}
-            <i class="fa fa-users"></i> + Executive{" "}
+            <i className="fa fa-users"></i> + Executive{" "}
           </Link>
             </>
           )}

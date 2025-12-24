@@ -442,15 +442,15 @@ const PromptEngineering = () => {
                 data-aos="fade-up"
                 className="text-4xl text-center font-bold mb-3"
               >
-                <span class="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#f15b29] relative inline-block">
-                  <i class="relative text-white ">
+                <span className="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#f15b29] relative inline-block">
+                  <i className="relative text-white ">
                     {" "}
                     Take Your Career to the Next Level with{" "}
                   </i>
                 </span>
 
-                <span class="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#000] relative inline-block">
-                  <i class="relative text-white ">
+                <span className="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#000] relative inline-block">
+                  <i className="relative text-white ">
                     Prompt Engineering in Generative AI
                   </i>
                 </span>
@@ -923,14 +923,14 @@ const PromptEngineering = () => {
                       onClick={(e) => setActionType("Only Download Brochure")}
                       className="px-4 py-2 w-full bg-[#f15b29] text-white rounded-md"
                     >
-                      <i class="fa fa-download"></i>
+                      <i className="fa fa-download"></i>
                     </button>
                     <button
                       type="submit"
                       onClick={(e) => setActionType("Requested To Call Back")}
                       className="px-4 py-2 w-full bg-[#f15b29] flex items-center justify-center gap-1 text-white rounded-md"
                     >
-                      <i class="fa fa-download"></i> +{" "}
+                      <i className="fa fa-download"></i> +{" "}
                       <RiCustomerService2Fill />
                     </button>
                   </div>

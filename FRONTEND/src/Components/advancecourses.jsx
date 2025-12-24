@@ -14,7 +14,7 @@ const AdvanceCounses = () => {
       title: "MERN Stack Devlopment",
       description:
         "Building web apps using MongoDB, Express.js, React, and Node.js",
-      icon: <i class="fa fa-code" aria-hidden="true"></i>,
+      icon: <i className="fa fa-code" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -22,7 +22,7 @@ const AdvanceCounses = () => {
       title: "Data Science",
       description:
         "Analyzing data to find insights that guide business decisions.",
-      icon: <i class="fa fa-database" aria-hidden="true"></i>,
+      icon: <i className="fa fa-database" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -30,7 +30,7 @@ const AdvanceCounses = () => {
       title: "Digital Marketing",
       description:
         "Promoting products online through channels like social media to drive business goals.",
-      icon: <i class="fa fa-bullhorn" aria-hidden="true"></i>,
+      icon: <i className="fa fa-bullhorn" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -38,7 +38,7 @@ const AdvanceCounses = () => {
       title: "Investment Banking",
       description:
         "Advising on financial transactions and raising capital for companies.",
-      icon: <i class="fa fa-bank"></i>,
+      icon: <i className="fa fa-bank"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -46,7 +46,7 @@ const AdvanceCounses = () => {
       title: "Product Management",
       description:
         "Overseeing a product’s development from concept to market.",
-      icon: <i class="fa fa-cube" aria-hidden="true"></i>,
+      icon: <i className="fa fa-cube" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -54,7 +54,7 @@ const AdvanceCounses = () => {
       title: "Performance Marketing",
       description:
         "Marketing based on measurable actions, like clicks or sales.",
-      icon: <i class="fa fa-line-chart" aria-hidden="true"></i>,
+      icon: <i className="fa fa-line-chart" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -62,7 +62,7 @@ const AdvanceCounses = () => {
       title: "Automation Testing",
       description:
         "Streamlining Quality with Precision: Empowering Automation Testing",
-      icon: <i class="fa fa-refresh" aria-hidden="true"></i>,
+      icon: <i className="fa fa-refresh" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -70,7 +70,7 @@ const AdvanceCounses = () => {
       title: "Prompt Engineering AI",
       description:
         "Crafting the Future: Precision Prompt Engineering for Next-Gen AI",
-      icon: <i class="fa fa-android" aria-hidden="true"></i>,
+      icon: <i className="fa fa-android" aria-hidden="true"></i>,
       level: "Advanced",
       duration: "6 Months",
     },
@@ -184,7 +184,7 @@ const AdvanceCounses = () => {
         </div>
         <div className="my-10 text-center">
           <button className="border group px-3 py-1.5 rounded-full">
-            <Link to="/advance"> View All Advanced Courses <i class="fa fa-arrow-right ml-2 border  rounded-full p-2 group-hover:translate-x-1 ease-linear duration-300 " aria-hidden="true"></i></Link> 
+            <Link to="/advance"> View All Advanced Courses <i className="fa fa-arrow-right ml-2 border  rounded-full p-2 group-hover:translate-x-1 ease-linear duration-300 " aria-hidden="true"></i></Link> 
           </button>
         </div>
       </div>
@@ -195,39 +195,39 @@ const AdvanceCounses = () => {
         </h1>
         <ul className="space-y-3">
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Expert-led instruction from industry professionals
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Hands-on projects and real-world applications
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Flexible learning schedules to fit your lifestyle
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Cutting-edge curriculum updated regularly
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Comprehensive support and mentoring
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Networking opportunities with professionals and peers
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Certification and career advancement
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Global learning community
           </li>
           <li className="flex items-center gap-2">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
             Tailored learning paths for every skill level
           </li>
         </ul>

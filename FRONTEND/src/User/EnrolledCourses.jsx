@@ -52,20 +52,20 @@ const EnrolledCourse = () => {
 
   if(!enrollData){
     return <div id="loader">
-    <div class="three-body">
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
+    <div className="three-body">
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
   </div>
   </div>;
  }
 
  if(!selectedCourse){
   return <div id="loader">
-  <div class="three-body">
-<div class="three-body__dot"></div>
-<div class="three-body__dot"></div>
-<div class="three-body__dot"></div>
+  <div className="three-body">
+<div className="three-body__dot"></div>
+<div className="three-body__dot"></div>
+<div className="three-body__dot"></div>
 </div>
 </div>;
 }
@@ -118,10 +118,10 @@ const EnrolledCourse = () => {
                 <tr key={key}>
                   <td>
                     <span className="capitalize">
-                      <i class="fa fa-play"></i> {key}
+                      <i className="fa fa-play"></i> {key}
                     </span>
                     <h3 className="capitalize">{selectedCourse.session[key].title}</h3>
-                    <i class="fa fa-eye-slash"></i>
+                    <i className="fa fa-eye-slash"></i>
                   </td>
                 </tr>
               ))}

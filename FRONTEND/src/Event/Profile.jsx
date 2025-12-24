@@ -199,14 +199,14 @@ const Profile = () => {
                 href="https://www.linkedin.com/company/krutanic/"
                 className="text-blue-700 text-4xl hover:text-blue-900"
               >
-                <span class="fa fa-linkedin"></span>
+                <span className="fa fa-linkedin"></span>
               </a>
               <a
                 target="_blank"
                 href="https://github.com/Krutanic/"
                 className="text-black text-4xl"
               >
-                <span class="fa fa-github"></span>
+                <span className="fa fa-github"></span>
               </a>
             </div>
           </div>

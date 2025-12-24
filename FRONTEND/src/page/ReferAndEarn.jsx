@@ -118,20 +118,20 @@ const ReferAndEarn = () => {
           <div className="steps">
             <div className="step">
               <h3>
-                <i class="fa fa-user-plus" aria-hidden="true"></i> Refer Your
+                <i className="fa fa-user-plus" aria-hidden="true"></i> Refer Your
                 Friend
               </h3>
               <p>Share the form and invite friends.</p>
             </div>
             <div className="step">
               <h3>
-                <i class="fa fa-users" aria-hidden="true"></i> Friend Enrolls
+                <i className="fa fa-users" aria-hidden="true"></i> Friend Enrolls
               </h3>
               <p>Friend joins an online course.</p>
             </div>
             <div className="step">
               <h3>
-                <i class="fa fa-money" aria-hidden="true"></i> You Get Paid
+                <i className="fa fa-money" aria-hidden="true"></i> You Get Paid
               </h3>
               <p>Get reward based on enrollment fee.</p>
             </div>
@@ -173,25 +173,25 @@ const ReferAndEarn = () => {
           <div className="benefits">
             <div className="benift_box">
               <span>
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <i className="fa fa-graduation-cap" aria-hidden="true"></i>
               </span>
               <p>Help your friends access quality education</p>
             </div>
             <div className="benift_box">
               <span>
-                <i class="fa fa-inr" aria-hidden="true"></i>
+                <i className="fa fa-inr" aria-hidden="true"></i>
               </span>
               <p>Earn up to ₹700 per referral</p>
             </div>
             <div className="benift_box">
               <span>
-                <i class="fa fa-users" aria-hidden="true"></i>
+                <i className="fa fa-users" aria-hidden="true"></i>
               </span>
               <p>Be part of a thriving learner community</p>
             </div>
             <div className="benift_box">
               <span>
-                <i class="fa fa-scissors" aria-hidden="true"></i>
+                <i className="fa fa-scissors" aria-hidden="true"></i>
               </span>
               <p>Quick & easy process</p>
             </div>
@@ -223,7 +223,7 @@ const ReferAndEarn = () => {
               <button type="submit">Submit</button>
             </form>
             <span>
-              <i class="fa fa-lock"></i> Your personal
+              <i className="fa fa-lock"></i> Your personal
               information is secure with us
             </span>
           </div>
@@ -269,11 +269,11 @@ const ReferAndEarn = () => {
                 <div>
                   <h4>Sumit Sahu</h4>
                   <span>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star-half" aria-hidden="true"></i>
                   </span>
                 </div>
               </div>
@@ -286,11 +286,11 @@ const ReferAndEarn = () => {
                 <div>
                   <h4>Ritik</h4>
                   <span>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star-o" aria-hidden="true"></i>
                   </span>
                 </div>
               </div>

@@ -120,7 +120,7 @@ const EventDashBoard = () => {
         <div className="fixed inset-0 z-50 bg-opacity-70 bg-black p-3  flex items-center justify-center">
           <div className="bg-white p-4 rounded-lg shadow-md">
             <span className=" text-xl cursor-pointer float-right" onClick={() => setInformation(false)}>
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
+              <i className="fa fa-times-circle" aria-hidden="true"></i>
             </span>
             <div className="p-4">
               <h2 className="text-center font-bold text-xl mb-4">

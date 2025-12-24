@@ -24,7 +24,7 @@ const AdminHeader = () => {
       </div>
       <div className="sidebar">
         <Link to="/AdminDashboard">
-          <i class="fa fa-home"></i> Home
+          <i className="fa fa-home"></i> Home
         </Link>
         <Link to="/AddCourse">
           <i className="fa fa-plus-circle mr-2"></i>Create Course
@@ -87,10 +87,10 @@ const AdminHeader = () => {
           <i className="fa fa-calendar-check-o mr-2"></i>Event Registrations
         </Link>
         <Link to="/AlumniData">
-        <i class="fa fa-lightbulb-o mr-2"></i>Alumni Review
+        <i className="fa fa-lightbulb-o mr-2"></i>Alumni Review
         </Link>
         <Link to="/ReferAndEarnResponse">
-       <i class="fa fa-bell mr-2"></i>Refer & Earn
+       <i className="fa fa-bell mr-2"></i>Refer & Earn
         </Link>
         <Link to="/AllTeamDetail">
           <i className="fa fa-users mr-2"></i>Team Detail

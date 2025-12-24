@@ -215,8 +215,8 @@ const CreatePlacementCoordinator = () => {
                 <td>{coordinator.email}</td>
                 {/* <td>{coordinator.password}</td> */}
                 <td>
-                  <button onClick={() => handleEdit(coordinator)}><i class="fa fa-edit"></i></button>
-                  <button onClick={() => handleDelete(coordinator._id)}><i class="fa fa-trash-o text-red-600"></i></button>
+                  <button onClick={() => handleEdit(coordinator)}><i className="fa fa-edit"></i></button>
+                  <button onClick={() => handleDelete(coordinator._id)}><i className="fa fa-trash-o text-red-600"></i></button>
                 </td>
                 <td>
                   <button

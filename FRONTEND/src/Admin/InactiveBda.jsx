@@ -79,10 +79,10 @@ const InactiveBda = () => {
         </div>
         {loading ? (
           <div id="loader">
-            <div class="three-body">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
+            <div className="three-body">
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
             </div>
           </div>
         ) : (
@@ -109,9 +109,9 @@ const InactiveBda = () => {
                   <td>{bda.designation}</td>
                   <td>{bda.team}</td>
                   <td>{bda.password}</td>
-                  <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i class="fa fa-sign-in"></i></td>
+                  <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i className="fa fa-sign-in"></i></td>
                   <td>
-                    <button title="Active BDA" onClick={() => handleChangeStatus(bda._id , "Active")}><i class="fa fa-eye-slash"></i></button>
+                    <button title="Active BDA" onClick={() => handleChangeStatus(bda._id , "Active")}><i className="fa fa-eye-slash"></i></button>
                   </td>
                   <td>
                     {bda.status}

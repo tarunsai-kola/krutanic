@@ -167,8 +167,8 @@ const Dashboard = () => {
               <hr />
               <h2>Actions</h2>
               <hr />
-              {/* <button className="border-2 border-blue-600 text-blue-600"><i class="fa fa-download"></i>  As Image </button>
-              <button className="border-2 border-red-600 text-red-600"><i class="fa fa-download"></i>  Certificate</button> */}
+              {/* <button className="border-2 border-blue-600 text-blue-600"><i className="fa fa-download"></i>  As Image </button>
+              <button className="border-2 border-red-600 text-red-600"><i className="fa fa-download"></i>  Certificate</button> */}
               <button
                 className="border-2 border-blue-800 bg-blue-700 text-white"
                 onClick={() => addLinkedin(selectedCertificate)}
@@ -225,10 +225,10 @@ const Dashboard = () => {
       <h2>Courses</h2>
       {loading ? (
         <div id="loader">
-          <div class="three-body">
-            <div class="three-body__dot"></div>
-            <div class="three-body__dot"></div>
-            <div class="three-body__dot"></div>
+          <div className="three-body">
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
           </div>
         </div>
       ) : (
@@ -281,7 +281,7 @@ const Dashboard = () => {
                       .{" "}
                       <i
                         title=" share the screenshot to your counselor"
-                        class="fa fa-info-circle"
+                        className="fa fa-info-circle"
                         aria-hidden="true"
                       ></i>
                     </strong>

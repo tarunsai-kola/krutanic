@@ -124,13 +124,13 @@ const BDAHeader = () => {
             )}
           </div>
           <Link to="/Home">
-            <i class="fa fa-dashboard"></i> Home
+            <i className="fa fa-dashboard"></i> Home
           </Link>
           <Link to="/LeaderBoard">
-            <i class="fa fa-trophy"></i> LeaderBoard
+            <i className="fa fa-trophy"></i> LeaderBoard
           </Link>
           <Link to="/CompanyLeads">
-            <i class="fa fa-tags"></i> Company Leads
+            <i className="fa fa-tags"></i> Company Leads
           </Link>
           {["LEADER", "MANAGER"].includes(bdaData?.designation) && (
             <>
@@ -140,39 +140,39 @@ const BDAHeader = () => {
             </>
           )}
           <Link to="/OnBoarding">
-            <i class="fa fa-edit"></i> OnBoarding Form
+            <i className="fa fa-edit"></i> OnBoarding Form
           </Link>
           <Link to="/Booked">
-            <i class="fa fa-calendar-o"></i> Booked Payment
+            <i className="fa fa-calendar-o"></i> Booked Payment
           </Link>
           <Link to="/FullPaid">
-            <i class="fa fa-calendar-check-o"></i> Full Payment
+            <i className="fa fa-calendar-check-o"></i> Full Payment
           </Link>
           <Link to="/Default">
-            <i class="fa fa-calendar-times-o"></i> Default Payment
+            <i className="fa fa-calendar-times-o"></i> Default Payment
           </Link>
           <Link to="/AddUser">
-            <i class="	fa fa-book"></i> Add Name/Email
+            <i className="	fa fa-book"></i> Add Name/Email
           </Link>
           <Link to="/Reference">
-            <i class="fa fa-bell"></i> Your Reference
+            <i className="fa fa-bell"></i> Your Reference
           </Link>
           {["LEADER", "MANAGER"].includes(bdaData?.designation) && (
             <>
               <Link to="/TeamDetail">
-                <i class="fa fa-users"></i> Team
+                <i className="fa fa-users"></i> Team
               </Link>
             </>
           )}
           {bdaData?.designation === "MANAGER" &&
             bdaData?.Access === true && (
               <Link to="/AddTeam">
-                <i class="fa fa-user"></i> Add Team
+                <i className="fa fa-user"></i> Add Team
               </Link>
             )}
 
           <Link to="/BDARevenueSheet">
-            <i class="fa fa-money"></i> Revenue
+            <i className="fa fa-money"></i> Revenue
           </Link>
           <button onClick={handleLogout}>
             <i className="fa fa-sign-out"></i> Logout

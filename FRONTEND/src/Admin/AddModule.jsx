@@ -111,10 +111,10 @@ const AddModule = () => {
 
   if(!selectedCourse){
     return <div id="loader">
-    <div class="three-body">
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
+    <div className="three-body">
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
   </div>
   </div>;
  }
@@ -208,10 +208,10 @@ const AddModule = () => {
                       <td>
                         {" "}
                         <button onClick={() => handleEditModule(key)}>
-                         <i class="fa fa-edit"></i>
+                         <i className="fa fa-edit"></i>
                         </button>
                         <button onClick={() => handleDeleteModule(key)}>
-                          <i class="fa fa-trash-o text-red-600"></i>
+                          <i className="fa fa-trash-o text-red-600"></i>
                         </button>{" "}
                       </td>
                     </tr>

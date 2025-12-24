@@ -502,15 +502,15 @@ The Krutanic Advanced Program delivers an intensive, career-focused curriculum t
                         </h2>
                         <ul className=" text-lg space-y-2 px-2">
                           <li>
-                            <i class="fa fa-hand-o-right text-[#f15b29] pr-2"></i>Hands-On
+                            <i className="fa fa-hand-o-right text-[#f15b29] pr-2"></i>Hands-On
                             Learing Via 50+ Projects
                           </li>
                           <li>
-                            <i class="fa fa-hand-o-right text-[#f15b29] pr-2"></i>1:1
+                            <i className="fa fa-hand-o-right text-[#f15b29] pr-2"></i>1:1
                             Mentorship From AI Specialists
                           </li>
                           <li>
-                            <i class="fa fa-hand-o-right text-[#f15b29] pr-2"></i>
+                            <i className="fa fa-hand-o-right text-[#f15b29] pr-2"></i>
                             Personalized Career Guidence{" "}
                           </li>
                         </ul>

@@ -218,7 +218,7 @@ const MentorQueries = () => {
               currentPage === 1 ? "cursor-not-allowed" : "cursor-pointer"
             }`}
           >
-            <i class="fa fa-chevron-circle-left"></i>
+            <i className="fa fa-chevron-circle-left"></i>
           </button>
           <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
           <button

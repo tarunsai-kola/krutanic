@@ -80,7 +80,7 @@ const BDAHeader = () => {
       </div>
       {isMobileVisible && (
         <div className="sidebar">
-          <Link to="/bdadashboard"><i class="fa fa-home"></i> {BdaName}</Link>
+          <Link to="/bdadashboard"><i className="fa fa-home"></i> {BdaName}</Link>
           <Link to="/AddTransactionId">Add Candidate Email</Link>
           <Link to="/OnBoarding">OnBoarding Form</Link>
           <Link to="/bbookedpayment">Booked Payment</Link>

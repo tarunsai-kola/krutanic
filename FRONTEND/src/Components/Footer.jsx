@@ -35,21 +35,21 @@ const Footer = () => {
         <div className="footercontact">
           <a href="mailto:support@krutanic.com" target="blank">
             {" "}
-            <i class="fa fa-envelope text-red-600"></i> <br /> Mail us <br />{" "}
+            <i className="fa fa-envelope text-red-600"></i> <br /> Mail us <br />{" "}
            support@krutanic.com
           </a>
           <a href="tel:+917022812878" target="blank">
             {" "}
-            <i class="fa fa-phone text-blue-600"></i>
+            <i className="fa fa-phone text-blue-600"></i>
             <br /> Call us <br /> +91-7022812878
           </a>
           <a href="https://wa.me/7022812878?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20programs." target="blank">
             {" "}
-            <i class="fa fa-whatsapp text-green-600"> </i>
+            <i className="fa fa-whatsapp text-green-600"> </i>
             <br /> WhatsApp us <br /> +91-7022812878
           </a>
           <a>
-            <i class="fa fa-map-marker text-red-500"> </i>
+            <i className="fa fa-map-marker text-red-500"> </i>
             <br /> Find us <br /> Bengaluru, Karnataka
           </a>
         </div>
@@ -83,14 +83,14 @@ const Footer = () => {
               href="https://www.linkedin.com/company/krutanic/"
               className="text-blue-700  hover:text-blue-900"
             >
-              <span class="fa fa-linkedin"></span>
+              <span className="fa fa-linkedin"></span>
             </a>
             <a
             target="_blank"
               href="https://github.com/Krutanic/"
               className="text-white"
             >
-              <span class="fa fa-github"></span>
+              <span className="fa fa-github"></span>
             </a>
           </div>
           <div className="footerlinkright">
@@ -175,7 +175,7 @@ const Footer = () => {
         <div className="policy">
           <div className="policytext">
             <div className="close">
-              <span class="fa fa-close" onClick={policy1}></span>
+              <span className="fa fa-close" onClick={policy1}></span>
             </div>
             <div className="text">
               <h1>Privacy Policy</h1>
@@ -280,7 +280,7 @@ const Footer = () => {
         <div className="policy">
           <div className="policytext">
             <div className="close">
-              <span class="fa fa-close" onClick={policy2}></span>
+              <span className="fa fa-close" onClick={policy2}></span>
             </div>
             <div className="text">
               <h1>TERMS AND CONDITIONS</h1>
@@ -381,7 +381,7 @@ const Footer = () => {
         <div className="policy">
           <div className="policytext">
             <div className="close">
-              <span class="fa fa-close" onClick={policy3}></span>
+              <span className="fa fa-close" onClick={policy3}></span>
             </div>
             <div className="text">
               <h2>No Refund Policy </h2>

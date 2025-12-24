@@ -440,15 +440,15 @@ const AutomationTesting = () => {
                 data-aos="fade-up"
                 className="text-4xl text-center font-bold mb-3"
               >
-                <span class="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#f15b29] relative inline-block">
-                  <i class="relative text-white ">
+                <span className="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#f15b29] relative inline-block">
+                  <i className="relative text-white ">
                     {" "}
                     Take Your Career to the Next Level with{" "}
                   </i>
                 </span>
 
-                <span class="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#000] relative inline-block">
-                  <i class="relative text-white ">Automation Testing</i>
+                <span className="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-2 before:bg-[#000] relative inline-block">
+                  <i className="relative text-white ">Automation Testing</i>
                 </span>
               </h1>
             </div>
@@ -922,7 +922,7 @@ const AutomationTesting = () => {
                       onClick={(e) => setActionType("Only Download Brochure")}
                       className="px-4 py-2 w-full bg-[#f15b29] text-white rounded-md"
                     >
-                      {loading ? "Loading..." :  <i class="fa fa-download"></i>}
+                      {loading ? "Loading..." :  <i className="fa fa-download"></i>}
                     </button>
                     <button
                       type="submit"
@@ -930,7 +930,7 @@ const AutomationTesting = () => {
                       onClick={(e) => setActionType("Requested To Call Back")}
                       className="px-4 py-2 w-full bg-[#f15b29] flex items-center justify-center gap-1 text-white rounded-md"
                     >
-                      {loading ? "Loading..." : <p className="flex items-center justify-center"><i class="fa fa-download"></i> +  <RiCustomerService2Fill /></p>}
+                      {loading ? "Loading..." : <p className="flex items-center justify-center"><i className="fa fa-download"></i> +  <RiCustomerService2Fill /></p>}
                       
                     </button>
                   </div>

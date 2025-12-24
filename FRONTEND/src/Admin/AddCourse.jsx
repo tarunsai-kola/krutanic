@@ -120,10 +120,10 @@ const AddCourse = () => {
        )}  
         {loading ? (
           <div id="loader">
-            <div class="three-body">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
+            <div className="three-body">
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
             </div>
           </div>
         ) : (
@@ -147,8 +147,8 @@ const AddCourse = () => {
                 <td>{index + 1}</td>
                 <td>{course.title}</td>
                 <td>
-                  <button ><i class="fa fa-edit" onClick={() => handleEdit(course._id)}></i></button>
-                  <button onClick={() => handleDelete(course._id,course)}><i class="fa fa-trash-o text-red-600"></i></button>
+                  <button ><i className="fa fa-edit" onClick={() => handleEdit(course._id)}></i></button>
+                  <button onClick={() => handleDelete(course._id,course)}><i className="fa fa-trash-o text-red-600"></i></button>
                 </td>
               </tr>
             ))}

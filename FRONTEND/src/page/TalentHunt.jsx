@@ -139,12 +139,12 @@ const TalentHunt = () => {
 
       <Toaster position="top-center" reverseOrder={false} />
       
-      <section class="home">
-        <div class="description">
-          <h1 data-aos="fade-up" class="title">
-            <span class="gradient-text">Grow Your Career </span> with the Best
+      <section className="home">
+        <div className="description">
+          <h1 data-aos="fade-up" className="title">
+            <span className="gradient-text">Grow Your Career </span> with the Best
           </h1>
-          <p data-aos="fade-up" class="paragraph">
+          <p data-aos="fade-up" className="paragraph">
             In today’s competitive world, the right mentor can guide your growth. Discover why students choose mentorship to gain skills, confidence, and career success.
           </p>
          
@@ -444,14 +444,14 @@ const TalentHunt = () => {
                 href="https://www.linkedin.com/company/krutanic/"
                 className="text-blue-700 text-4xl hover:text-blue-900"
               >
-                <span class="fa fa-linkedin"></span>
+                <span className="fa fa-linkedin"></span>
               </a>
               <a
                 target="_blank"
                 href="https://github.com/Krutanic/"
                 className="text-black text-4xl"
               >
-                <span class="fa fa-github"></span>
+                <span className="fa fa-github"></span>
               </a>
             </div>
           </div>

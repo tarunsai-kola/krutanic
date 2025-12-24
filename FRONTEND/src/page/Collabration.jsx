@@ -156,8 +156,8 @@ const Collabration = () => {
             className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white  "
           >
             Where Achievements Meet
-            <span class="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#f15b29] relative inline-block">
-              <i class="relative text-white ">Aspirations</i>
+            <span className="before:block m-2 p-1 before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#f15b29] relative inline-block">
+              <i className="relative text-white ">Aspirations</i>
             </span>
           </h1>
           <p data-aos="fade-up" className="mt-6 text-xl text-white">

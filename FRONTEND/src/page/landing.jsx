@@ -50,28 +50,28 @@ const HomePage = () => {
             </Link>
             <div className="number">
               <h2 data-aos="fade-right">
-                <span class="fa fa-globe"></span> 250+ Hiring Partners
+                <span className="fa fa-globe"></span> 250+ Hiring Partners
               </h2>
               <h2 data-aos="fade-right">
-                <span class="fa fa-globe"></span> 170+ Global Mentors
+                <span className="fa fa-globe"></span> 170+ Global Mentors
               </h2>
             </div>
           </div>
           <div className="box">
             <div data-aos="zoom-in" data-aos-delay="500">
-              <span class="fa fa-graduation-cap"></span>
+              <span className="fa fa-graduation-cap"></span>
               <p>Explore Industry-Leading Courses to Boost Skills.</p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="1000">
-              <span class="fa fa-briefcase"></span>
+              <span className="fa fa-briefcase"></span>
               <p>Learn from Experienced Industry Experts.</p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="500">
-              <span class="fa fa-laptop"></span>
+              <span className="fa fa-laptop"></span>
               <p>Gain Hands-On Experience with Real Projects.</p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="1000">
-              <span class="fa fa-line-chart"></span>
+              <span className="fa fa-line-chart"></span>
               <p>Get Personalized Placement Support for Dream Job.</p>
             </div>
           </div>
@@ -157,22 +157,22 @@ const HomePage = () => {
           </p>
           <div>
             <div data-aos="fade-up" className="provide1">
-              <span class="fa fa-graduation-cap text-green-500"></span>
+              <span className="fa fa-graduation-cap text-green-500"></span>
               <h2>Expert Mentorship</h2>
               <p>Get mentored by top professionals in the field.</p>
             </div>
             <div data-aos="fade-up" className="provide1">
-              <span class="fa fa-map text-orange-500"></span>
+              <span className="fa fa-map text-orange-500"></span>
               <h2>Customized Paths</h2>
               <p>Programs customized to match your goals and ambitions.</p>
             </div>
             <div data-aos="fade-up" className="provide1">
-              <span class="fa fa-briefcase text-blue-700"></span>
+              <span className="fa fa-briefcase text-blue-700"></span>
               <h2>Industrial Training</h2>
               <p>Skills designed to meet market and MNC standards.</p>
             </div>
             <div data-aos="fade-up" className="provide1">
-              <span class="fa fa-trophy text-red-500"></span>
+              <span className="fa fa-trophy text-red-500"></span>
               <h2>Proven Success</h2>
               <p>Alumni excelling in leading global companies.</p>
             </div>
@@ -224,13 +224,13 @@ const HomePage = () => {
                 </p>
               </div>
               <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="800" className="specialtext">
-                <span class="fa fa-star"></span>
+                <span className="fa fa-star"></span>
                 <p>
                   Each program is structured to meet individual needs, ensuring maximum growth and success in professional training. 
                 </p>
               </div>
               <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="1200" className="specialtext">
-                <span class="fa fa-gear"></span>
+                <span className="fa fa-gear"></span>
                 <p>
                   Our personalized approach empowers you to progress at your own pace, delivering a comprehensive and effective online certification experience. 
                 </p>

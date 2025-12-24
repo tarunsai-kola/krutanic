@@ -146,7 +146,7 @@ const [startDate, setStartDate] = useState("");
       </div>
       <div className="p-4 relative">
       <button onClick={() => setShowFilters(!showFilters)} className="bg-blue-500 text-white py-2 px-4 rounded">
-      <i class="fa fa-filter" aria-hidden="true"></i> Filter
+      <i className="fa fa-filter" aria-hidden="true"></i> Filter
       </button>
       {showFilters && (
         <div className="mt-4 absolute bg-white top-10 border w-[300px] p-4 rounded shadow-lg">
@@ -192,30 +192,34 @@ const [startDate, setStartDate] = useState("");
       <div className="courselist">
         {loading ? (
           <div id="loader">
-            <div class="three-body">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
+            <div className="three-body">
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
             </div>
           </div>
         ) : (
           <table>
-            <tr>
-              <th>Sl</th>
-              <th>Course</th>
-              <th>Session</th>
-              <th>For {currentMonth} </th>
-              <th>For {nextMonth}</th>
-            </tr>
-            {courses.map((course, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{course.title}</td>
-                <td>{Object.keys(course.session).length}</td>
-                <td>{payment?.filter((item) => item.domainId === course._id && item.monthOpted === currentMonth).length || 0}</td>
-                <td>{payment?.filter((item) => item.domainId === course._id && item.monthOpted === nextMonth).length || 0}</td>
+            <thead>
+              <tr>
+                <th>Sl</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>For {currentMonth} </th>
+                <th>For {nextMonth}</th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {courses.map((course, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{course.title}</td>
+                  <td>{Object.keys(course.session).length}</td>
+                  <td>{payment?.filter((item) => item.domainId === course._id && item.monthOpted === currentMonth).length || 0}</td>
+                  <td>{payment?.filter((item) => item.domainId === course._id && item.monthOpted === nextMonth).length || 0}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         )}
       </div>

@@ -133,7 +133,7 @@
           <div id="autopopup">
             <div className="autotext">
               <div className="close">
-                <span onClick={autoPopup} class="fa fa-close"></span>
+                <span onClick={autoPopup} className="fa fa-close"></span>
               </div>
               
               <div className="first">

@@ -77,10 +77,10 @@ const Createmanager = () => {
 
   if(!manager){
     return <div id="loader">
-    <div class="three-body">
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
+    <div className="three-body">
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
   </div>
   </div>;
  }
@@ -237,8 +237,8 @@ const Createmanager = () => {
                 <td>{manager.team}</td>
                 <td>{manager.designation}</td>
                 <td>
-                  <button onClick={() => handleEdit(manager)}><i class="fa fa-edit"></i></button>
-                  <button onClick={() => handleDelete(manager._id)}><i class="fa fa-trash-o text-red-600"></i></button>
+                  <button onClick={() => handleEdit(manager)}><i className="fa fa-edit"></i></button>
+                  <button onClick={() => handleDelete(manager._id)}><i className="fa fa-trash-o text-red-600"></i></button>
                 </td>
                 <td>
                   <div
@@ -246,7 +246,7 @@ const Createmanager = () => {
                     onClick={() => handleSendEmail(manager)}
                     disabled={manager.mailSended}
                   >
-                    {manager.mailSended ? <i class="fa fa-send-o text-green-600"></i> : <i class="fa fa-send-o text-red-600"></i>}
+                    {manager.mailSended ? <i className="fa fa-send-o text-green-600"></i> : <i className="fa fa-send-o text-red-600"></i>}
                   </div>
                 </td>
               </tr>

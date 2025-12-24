@@ -96,7 +96,7 @@ const OperationHeader = () => {
       </div>
       {isMobileVisible && (
         <div className="sidebar h-full">
-          <Link to="/OperationDashboard"><i class="fa fa-home"></i> {operationData ? operationData.fullname : "Login First"}</Link>
+          <Link to="/OperationDashboard"><i className="fa fa-home"></i> {operationData ? operationData.fullname : "Login First"}</Link>
           <Link to="/BookedPayment">Booked Payment</Link>
           <Link to="/FullPayment">Full Payment</Link>
           <Link to="/DefaultPayment">Default Payment</Link>

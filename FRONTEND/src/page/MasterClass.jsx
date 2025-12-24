@@ -535,7 +535,7 @@ const MasterClass = () => {
           <div className="form">
             <div className="close">
               <h3>Register NOW!</h3>
-              <span class="fa fa-close" onClick={closeForm}></span>
+              <span className="fa fa-close" onClick={closeForm}></span>
             </div>
             <h3 className="title">{selectedMasterClass.title}</h3>
             <form onSubmit={handleSubmit}>

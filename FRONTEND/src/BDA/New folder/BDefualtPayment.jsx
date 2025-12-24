@@ -27,10 +27,10 @@ const BDefualtPayment = () => {
   if (!newStudent) {
     return (
       <div id="loader">
-        <div class="three-body">
-          <div class="three-body__dot"></div>
-          <div class="three-body__dot"></div>
-          <div class="three-body__dot"></div>
+        <div className="three-body">
+          <div className="three-body__dot"></div>
+          <div className="three-body__dot"></div>
+          <div className="three-body__dot"></div>
         </div>
       </div>
     );
@@ -63,7 +63,7 @@ const BDefualtPayment = () => {
           />
 
           <div className="relative group inline-block">
-            <i class="fa fa-info-circle text-lg cursor-pointer"></i>
+            <i className="fa fa-info-circle text-lg cursor-pointer"></i>
             <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden w-max bg-gray-800 text-white text-sm rounded-md py-2 px-3 group-hover:block">
               Name, Email, Contact ,Counselor Name, Operation Name
               <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-t-8 border-gray-800 border-x-8 border-x-transparent"></div>

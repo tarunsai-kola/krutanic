@@ -100,7 +100,7 @@ const AboutUs = () => {
 
 
   return (
-      <div class="main_container" id="aboutus">
+      <div className="main_container" id="aboutus">
         <div id="abouttopcontent" className="px-[10px] py-[60px]">
           <main data-aos="fade-up">
             <div  className="content">

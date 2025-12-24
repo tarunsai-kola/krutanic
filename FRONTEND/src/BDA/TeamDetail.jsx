@@ -524,7 +524,7 @@ const TeamDetail = () => {
                   {bda.fullname}
                 </td>
                 <td>{bda.email}</td>
-                <td className="font-bold cursor-pointer" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i class="fa fa-sign-in"></i></td>
+                <td className="font-bold cursor-pointer" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i className="fa fa-sign-in"></i></td>
                 <td>{bda.designation}</td>
                 <td>{bda.team}</td>
                 <td>{bda.enrollments.length}</td>

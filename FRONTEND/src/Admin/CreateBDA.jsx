@@ -378,10 +378,10 @@ const CreateBDA = () => {
         </div>
         {loading ? (
           <div id="loader">
-            <div class="three-body">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
+            <div className="three-body">
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
             </div>
           </div>
         ) : (
@@ -410,12 +410,12 @@ const CreateBDA = () => {
                   <td>{bda.designation}</td>
                   <td>{bda.team}</td>
                   <td>{bda.password}</td>
-                  <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i class="fa fa-sign-in"></i></td>
+                  <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i className="fa fa-sign-in"></i></td>
                   <td>{bda.status}</td>
                   <td>
-                    <button title="Edit" onClick={() => handleEdit(bda)}><i class="fa fa-edit"></i></button>
-                    <button title="Delete" onClick={() => handleDelete(bda._id)}><i class="fa fa-trash-o text-red-600"></i></button>
-                    <button title="Inactive BDA" onClick={() => handleChangeStatus(bda._id , "Inactive")}><i class="fa fa-eye-slash"></i></button>
+                    <button title="Edit" onClick={() => handleEdit(bda)}><i className="fa fa-edit"></i></button>
+                    <button title="Delete" onClick={() => handleDelete(bda._id)}><i className="fa fa-trash-o text-red-600"></i></button>
+                    <button title="Inactive BDA" onClick={() => handleChangeStatus(bda._id , "Inactive")}><i className="fa fa-eye-slash"></i></button>
                   </td>
                   <td>
                     <div className="cursor-pointer">
@@ -433,9 +433,9 @@ const CreateBDA = () => {
                       disabled={bda.mailSended}
                     >
                       {bda.mailSended ? (
-                        <i class="fa fa-send-o text-green-600"></i>
+                        <i className="fa fa-send-o text-green-600"></i>
                       ) : (
-                        <i class="fa fa-send-o text-red-600"></i>
+                        <i className="fa fa-send-o text-red-600"></i>
                       )}
                     </div>
                   </td>

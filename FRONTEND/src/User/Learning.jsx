@@ -25,10 +25,10 @@ const Learning = () => {
 
   if(!selectedSession){
     return <div id="loader">
-    <div class="three-body">
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
-  <div class="three-body__dot"></div>
+    <div className="three-body">
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
+  <div className="three-body__dot"></div>
   </div>
   </div>;
  }
@@ -45,7 +45,7 @@ const Learning = () => {
           <h2>COURSE CONTENT</h2>
           <ul onClick={sessionVisibility}>
             {sessions && Object.keys(sessions).map((key) => (
-              <li key={key}  onClick={() => handleSessionClick(sessions[key])}  ><span>{key}: {sessions[key].title}</span> <i class="fa fa-play-circle"></i></li>
+              <li key={key}  onClick={() => handleSessionClick(sessions[key])}  ><span>{key}: {sessions[key].title}</span> <i className="fa fa-play-circle"></i></li>
             ))
             }
 

@@ -236,10 +236,10 @@ const AddTeam = () => {
         </div>
         {loading ? (
           <div id="loader">
-            <div class="three-body">
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
-              <div class="three-body__dot"></div>
+            <div className="three-body">
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
+              <div className="three-body__dot"></div>
             </div>
           </div>
         ) : (
@@ -266,8 +266,8 @@ const AddTeam = () => {
                   <td>{bda.team}</td>
                   <td>{bda.password}</td>
                   {/* <td>
-                    <button onClick={() => handleEdit(bda)}><i class="fa fa-edit"></i></button>
-                    <button onClick={() => handleDelete(bda._id)}><i class="fa fa-trash-o text-red-600"></i></button>
+                    <button onClick={() => handleEdit(bda)}><i className="fa fa-edit"></i></button>
+                    <button onClick={() => handleDelete(bda._id)}><i className="fa fa-trash-o text-red-600"></i></button>
                   </td> */}
                   <td>
                     <div
@@ -276,9 +276,9 @@ const AddTeam = () => {
                       disabled={bda.mailSended}
                     >
                       {bda.mailSended ? (
-                        <i class="fa fa-send-o text-green-600"></i>
+                        <i className="fa fa-send-o text-green-600"></i>
                       ) : (
-                        <i class="fa fa-send-o text-red-600"></i>
+                        <i className="fa fa-send-o text-red-600"></i>
                       )}
                     </div>
                   </td>

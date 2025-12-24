@@ -461,12 +461,12 @@ const AddEvent = () => {
                     <div className="flex items-center gap-2">
                     <button>
                     <i
-                      class="fa fa-edit"
+                      className="fa fa-edit"
                       onClick={() => handleEditQuestion(question)}
                     ></i>
                   </button>
                   <button onClick={() => handleDeleteQuestion(selectedEvent._id, question._id)}>
-                    <i class="fa fa-trash-o text-red-600"></i>
+                    <i className="fa fa-trash-o text-red-600"></i>
                   </button>
                     </div>
                   </p>

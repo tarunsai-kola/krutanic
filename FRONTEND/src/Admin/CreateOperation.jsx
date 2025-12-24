@@ -349,7 +349,7 @@ const CreateOperation = () => {
                 </td>
                 <td>{operation.email}</td>
                 <td>{operation.password}</td>
-                <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(operation.email, operation.password)}>Login <i class="fa fa-sign-in"></i></td>
+                <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(operation.email, operation.password)}>Login <i className="fa fa-sign-in"></i></td>
                 <td>
                   <button onClick={() => handleEdit(operation)}>
                     <i className="fa fa-edit"></i>

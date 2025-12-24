@@ -293,8 +293,8 @@ const MasterClasses = () => {
                   </select>
                 </td>
                 <td>
-                  <button ><i class="fa fa-edit" onClick={() => handleEdit(masterclass)}></i></button>
-                  <button onClick={() => handleDelete(masterclass._id)}><i class="fa fa-trash-o text-red-600"></i></button>
+                  <button ><i className="fa fa-edit" onClick={() => handleEdit(masterclass)}></i></button>
+                  <button onClick={() => handleDelete(masterclass._id)}><i className="fa fa-trash-o text-red-600"></i></button>
                 </td>
                 <td>{masterclass.status}</td>
                 <td>
