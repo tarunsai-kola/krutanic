@@ -129,6 +129,31 @@ router.post("/createmarketing", async (req, res) => {
   }
 });
 
+// Direct login for marketing (without OTP)
+router.post("/checkmarketingauth", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await CreateMarketing.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
+
+    if (password !== user.password) {
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
+
+    const token = jwt.sign(
+      { _id: user._id, email: user.email, designation: user.designation, team: user.team },
+      process.env.JWT_SECRET,
+      { expiresIn: "10h" }
+    );
+    res.status(200).json({ token, marketingId: user._id, marketingName: user.fullname });
+  } catch (err) {
+    console.error("Error during login", err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 // GET request to retrieve all masrketing accounts
 router.get("/getmarketing", async (req, res) => {
   const { operationId } = req.query;

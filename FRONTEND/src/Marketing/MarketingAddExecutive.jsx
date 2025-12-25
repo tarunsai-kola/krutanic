@@ -259,9 +259,11 @@ const MarketingAddExecutive = () => {
                   <button onClick={() => handleEdit(operation)}>
                     <i className="fa fa-edit"></i>
                   </button>
+                  {/* Delete button hidden for leaders - only admin can delete 
                   <button onClick={() => handleDelete(operation._id)}>
                     <i className="fa fa-trash-o text-red-600"></i>
                   </button>
+                  */}
                 </td>
                 <td>
                   <div

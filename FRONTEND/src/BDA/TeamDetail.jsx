@@ -173,24 +173,24 @@ const TeamDetail = () => {
     // For non-managers, just match by their team
     return bda.team === selectedTeam;
   });
-   const handleloginteam = async (email,password) => {
-      try {
-        const response = await axios.post(`${API}/checkbdaauth`, { email, password });
-        if (response.status === 200) {
-        toast.success("Login successful!");
-        const loginTime = new Date().getTime();
-        setTimeout(() => {
-        localStorage.setItem("bdaId", response.data.bdaId);
-        localStorage.setItem("bdaName", response.data.bdaName);
-        localStorage.setItem("bdaToken", response.data.token);
-         localStorage.setItem("sessionStartTime", loginTime);
-         window.open("/Home", "_blank"); 
-      }, 500);
-      }
-      } catch (error) {
-        toast.error(error.response?.data?.message || "Failed to verify OTP!");
-      }
-    };
+  //  const handleloginteam = async (email,password) => {
+  //     try {
+  //       const response = await axios.post(`${API}/checkbdaauth`, { email, password });
+  //       if (response.status === 200) {
+  //       toast.success("Login successful!");
+  //       const loginTime = new Date().getTime();
+  //       setTimeout(() => {
+  //       localStorage.setItem("bdaId", response.data.bdaId);
+  //       localStorage.setItem("bdaName", response.data.bdaName);
+  //       localStorage.setItem("bdaToken", response.data.token);
+  //        localStorage.setItem("sessionStartTime", loginTime);
+  //        window.open("/Home", "_blank"); 
+  //     }, 500);
+  //     }
+  //     } catch (error) {
+  //       toast.error(error.response?.data?.message || "Failed to verify OTP!");
+  //     }
+  //   };
 
     
   const today = new Date();
@@ -505,7 +505,7 @@ const TeamDetail = () => {
               <th>Sl</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Login</th>
+              {/* <th>Login</th> */}
               <th>Designation</th>
               <th>Team</th>
               <th>Total</th>
@@ -524,7 +524,7 @@ const TeamDetail = () => {
                   {bda.fullname}
                 </td>
                 <td>{bda.email}</td>
-                <td className="font-bold cursor-pointer" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i className="fa fa-sign-in"></i></td>
+                {/* <td className="font-bold cursor-pointer" onClick={() => handleloginteam(bda.email, bda.password)}>Login <i className="fa fa-sign-in"></i></td> */}
                 <td>{bda.designation}</td>
                 <td>{bda.team}</td>
                 <td>{bda.enrollments.length}</td>

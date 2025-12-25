@@ -183,6 +183,25 @@ const CreateMarketingTeam = () => {
     }
     fetchOperation();
   };
+
+  const handleloginteam = async (email, password) => {
+    try {
+      const response = await axios.post(`${API}/checkmarketingauth`, { email, password });
+      if (response.status === 200) {
+        toast.success("Login successful!");
+        const loginTime = new Date().getTime();
+        setTimeout(() => {
+          localStorage.setItem("marketingToken", response.data.token);
+          localStorage.setItem("marketingUser", response.data.marketingName);
+          localStorage.setItem("sessionStartTime", loginTime);
+          window.open("/marketing/home", "_blank");
+        }, 500);
+      }
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to login!");
+    }
+  };
+
   return (
     <div id="create-marketing-team">
       <Toaster position="top-center" reverseOrder={false} />
@@ -283,7 +302,7 @@ const CreateMarketingTeam = () => {
               <th>Designation</th>
                 <th>Team</th>
               <th>Password</th>
-              {/* <th>Login</th> */}
+              <th>Login</th>
               <th>Action</th>
               <th>Send Login Credentials</th>
               {/* <th>Assinged Target</th> */}
@@ -299,7 +318,7 @@ const CreateMarketingTeam = () => {
                  <td>{operation.designation}</td>
                   <td>{operation.team}</td>
                 <td>{operation.password}</td>
-                {/* <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(operation.email, operation.password)}>Login <i className="fa fa-sign-in"></i></td> */}
+                <td className="cursor-pointer font-semibold" onClick={() => handleloginteam(operation.email, operation.password)}>Login <i className="fa fa-sign-in"></i></td>
                 <td>
                   <button onClick={() => handleEdit(operation)}>
                     <i className="fa fa-edit"></i>
